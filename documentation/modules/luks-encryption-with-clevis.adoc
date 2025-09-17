@@ -1,0 +1,13 @@
+// Module included in the following assemblies:
+//
+// * documentation/doc-Migration_Toolkit_for_Virtualization/master.adoc
+
+:_content-type: CONCEPT
+[id="luks-encryption-with-clevis_{context}"]
+= LUKS encryption with Clevis
+
+
+
+* LUKS (Linux Unified Key Setup): This is the standard disk encryption specification used on the source virtual machine (VM). The encrypted partitions remain in their original state during the migration process, ensuring data security and integrity.
+
+* Clevis: Clevis is a client-side framework that automates the decryption of LUKS volumes. It works by binding a LUKS key slot to a policy. For this feature, the Clevis configuration, including the policy and its associated network-based services (like a Tang server), is transferred or re-established in the destination environment.
